@@ -7,11 +7,10 @@ function App() {
   const [characterAmount,setCharacterAmount] = useState(10)
   const [characterRange,setCharacterRange] = useState(10)
 
-  const [includeNumber,setIncludeNumber] = useState()
-  const [includeSymbol,setIncludeSymbol] = useState()
-  const [includeUppercase,setIncludeUppercase] = useState()
+  const [includeNumber,setIncludeNumber] = useState(false)
+  const [includeSymbol,setIncludeSymbol] = useState(false)
+  const [includeUppercase,setIncludeUppercase] = useState(false)
   const [shwopass,setShowpass] = useState('password')
-
 
   const syncCharacterAmount = (e) => {
     const value = e.target.value;
@@ -106,17 +105,17 @@ function App() {
 
                 <div className='font-semibold text-lg space-x-11 items-center flex'>
                    <label htmlFor="">Include Uppercase</label>
-                   <input onChange={(e)=>setIncludeUppercase(e.target.value)} type="checkbox" className='w-5 h-5' />
+                   <input onChange={(e)=>setIncludeUppercase(!includeUppercase)} type="checkbox" className='w-5 h-5' />
                 </div>
 
                 <div className='font-semibold text-lg space-x-14 items-center flex'>
                    <label htmlFor="">Include  Numbers</label>
-                   <input onChange={(e)=>setIncludeNumber(e.target.value)} type="checkbox" className='w-5 h-5' />
+                   <input onChange={(e)=>setIncludeNumber(!includeNumber)} type="checkbox" className='w-5 h-5' />
                 </div>
 
                 <div className='font-semibold text-lg space-x-16 items-center flex'>
                    <label htmlFor="">Include Symbols</label>
-                   <input onChange={(e)=>setIncludeSymbol(e.target.value)} type="checkbox" className='w-5 h-5' />
+                   <input onChange={(e)=>setIncludeSymbol(!includeSymbol)} type="checkbox" className='w-5 h-5' />
                 </div>
 
 
