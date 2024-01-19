@@ -1,3 +1,8 @@
+<h1>View Demo Website</h1>
+<a href="https://akhil-v-3.github.io/Password-Generator/">Click here to view</a>
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
